@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--TV Shopper-->
+        <!--SHOPPING CART-->
         <scene sceneID="45L-2J-06N">
             <objects>
                 <tableViewController id="JnC-Qb-HI2" customClass="TableViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="TV Shopper" id="da8-aU-K1h">
+                    <navigationItem key="navigationItem" title="SHOPPING CART" id="da8-aU-K1h">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ksu-pc-bUp">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -125,12 +125,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nlq-xa-yaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="-175"/>
+            <point key="canvasLocation" x="910" y="-175"/>
         </scene>
-        <!--View Controller-->
+        <!--Product View Controller-->
+        <scene sceneID="OGh-wv-cIU">
+            <objects>
+                <viewController id="ids-PN-9c7" customClass="SIMProductViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aA-D5-Jiv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ThY-an-mUq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ECi-cC-tna">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caj-Nf-58z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1408" y="549"/>
+        </scene>
+        <!--Check Out Button View Controller-->
         <scene sceneID="dLx-kd-CCg">
             <objects>
-                <viewController id="Wvf-Ag-bxE" sceneMemberID="viewController">
+                <viewController id="Wvf-Ag-bxE" customClass="CheckOutButtonViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="53F-Zo-8PX"/>
                         <viewControllerLayoutGuide type="bottom" id="TbS-jz-5HG"/>
@@ -150,11 +169,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59e-zc-qCN">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96250909566879272" green="0.39031940698623657" blue="0.13558423519134521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96256512403488159" green="0.38221564888954163" blue="0.14199256896972656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="CHECK OUT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="performSegue:" destination="Wvf-Ag-bxE" eventType="touchUpInside" id="aw6-Bo-TEE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -170,6 +192,10 @@
                             <constraint firstAttribute="trailing" secondItem="q2J-Ws-2kx" secondAttribute="trailing" id="vz2-7l-zcB"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <connections>
+                        <segue destination="ids-PN-9c7" kind="show" identifier="checkOut" id="9tZ-zh-CCi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCT-1u-cJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

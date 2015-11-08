@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.;
     self.itemLabelCompany.text = [NSString stringWithFormat:@"By %@",self.itemCompany];
-    self.itemLabelPrice.text = [NSString stringWithFormat:@"$%i",self.itemPrice];
+    self.itemLabelPrice.text = [NSString stringWithFormat:@"$%i%@",self.itemPrice, @".99"];
     self.title = self.itemName;
     self.itemLabelName.text = self.itemName;
     [self.itemImageView setImage:self.itemImage];

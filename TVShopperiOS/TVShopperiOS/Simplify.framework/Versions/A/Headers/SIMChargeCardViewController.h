@@ -33,6 +33,7 @@
 @interface SIMChargeCardViewController : UIViewController
 
 -(instancetype)initWithPublicKey:(NSString *)publicKey;
+
 -(instancetype)initWithPublicKey:(NSString *)publicKey primaryColor:(UIColor *)primaryColor;
 /**
  See Apple's documentation at: https://developer.apple.com/library/ios/ApplePay_Guide/CreateRequest.html
@@ -50,5 +51,8 @@
 @property (nonatomic, strong) NSDecimalNumber *amount;
 @property (nonatomic) BOOL isCVCRequired;   /**< Enable validation on the CVC field */
 @property (nonatomic) BOOL isZipRequired;   /**< Enable validation on the Zip field */
+
+@property (strong, nonatomic) NSString *defaultCardNumber;
+@property (strong, nonatomic) NSString *defaultExpiration;
 
 @end

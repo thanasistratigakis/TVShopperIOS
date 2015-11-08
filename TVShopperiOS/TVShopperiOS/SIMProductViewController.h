@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <Simplify/SIMChargeCardViewController.h>
+#import <Simplify/SIMResponseViewController.h>
 
 @interface SIMProductViewController: UIViewController <SIMChargeCardViewControllerDelegate>
 

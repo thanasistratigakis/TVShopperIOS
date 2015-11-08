@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import <Simplify/Simplify.h>
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     [Parse setApplicationId:@"PXvPzNEGXByAl7E6VdtvuFG2KLPMDEg4WOrZ47Tp"
                   clientKey:@"jwsGDYj1zKbjxYiapwOFm5OQVIQlSUGsMidaFti6"];
     
-   UIImage *navBackgroundImage = [UIImage imageNamed:@"Navigation_Bar"];
+   UIImage *navBackgroundImage = [UIImage imageNamed:@"NavBar"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     
     return YES;

@@ -7,6 +7,7 @@
 //
 
 #import <Simplify/SIMChargeCardViewController.h>
+#import <Simplify/SIMResponseViewController.h>
 
 //1. Sign up to be a SIMChargeViewControllerDelegate so that you get the callback that gives you a token
 @interface SIMProductViewController: UIViewController <SIMChargeCardViewControllerDelegate>
@@ -37,5 +38,36 @@
     NSLog(@"Token:%@", token.token);
     
 }
+
+#pragma mark - SIMChargeViewControllerDelegate Protocol
+
+-(void)chargeCardCancelled {
+    
+    //User cancelled the SIMChargeCardViewController
+    NSLog(@"User Cancelled");
+    
+}
+
+-(void)creditCardTokenFailedWithError:(NSError *)error {
+    NSLog(@"Credit Card Token Failed with error:%@", error.localizedDescription);
+    
+    // create effect
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    
+    // add effect to an effect view
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+    effectView.frame = self.view.frame;
+    
+    // add the effect view to the image view
+    
+    NSString *errorDescription = @"There was a problem with the token.\nPlease try again.";
+    SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:effectView
+                                                                                         primaryColor:[UIColor blackColor]
+                                                                                                title:@"Failure."
+                                                                                          description:errorDescription];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+
 
 @end

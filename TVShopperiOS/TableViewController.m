@@ -21,6 +21,8 @@
 
 @implementation TableViewController{
     int currentIndex;
+    int counter;
+    NSMutableArray *pffilesArray;
 }
 
 - (IBAction)refresh:(id)sender {
@@ -38,60 +40,44 @@
     self.itemNameArray = [[NSMutableArray alloc] init];
     self.itemPictureArray = [[NSMutableArray alloc] init];
     self.itemInCartArray = [[NSMutableArray alloc] init];
+    pffilesArray = [[NSMutableArray alloc]init];
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Items"];
-    [query getObjectInBackgroundWithId:@"bTdMmJgo9F" block:^(PFObject *bowTie, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-        [self.itemCompanyArray addObject:bowTie[@"Company"]];
-        [self.itemDescArray addObject:bowTie[@"Description"]];
-        NSNumber *price = [bowTie objectForKey:@"Price"];
-        [self.itemPriceArray addObject:price];
-        [self.itemNameArray addObject:bowTie[@"Name"]];
-        [self.itemInCartArray addObject:bowTie[@"inCart"]];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            PFFile *picture = [bowTie objectForKey:@"Picture"];
-            [picture getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                if (!error) {
-                    self.bowTieImage = [[UIImage alloc]initWithData:data];
-                    [self.itemPictureArray addObject:self.bowTieImage];
-                }
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.tableView reloadData];
-                });
-            }];
-        });
-    }];
-    
-    
-    PFQuery *queryTwo = [PFQuery queryWithClassName:@"Items"];
-    [queryTwo getObjectInBackgroundWithId:@"A77QNQKCPA" block:^(PFObject *hat, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-        [self.itemCompanyArray addObject:hat[@"Company"]];
-        [self.itemDescArray addObject:hat[@"Description"]];
-        NSNumber *price = [hat objectForKey:@"Price"];
-        [self.itemPriceArray addObject:price];
-        [self.itemNameArray addObject:hat[@"Name"]];
-        [self.itemInCartArray addObject:hat[@"inCart"]];
-        
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-        PFFile *picture = [hat objectForKey:@"Picture"];
+    [query whereKey:@"inCart" notEqualTo:[NSNumber numberWithBool:false]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        for(int i = 0; i < objects.count; i++){
+            PFObject *object = [objects objectAtIndex:i];
+            [self.itemCompanyArray addObject:object[@"Company"]];
+            [self.itemDescArray addObject:object[@"Description"]];
+            NSNumber *price = [object objectForKey:@"Price"];
+            [self.itemPriceArray addObject:price];
+            [self.itemNameArray addObject:object[@"Name"]];
+            [pffilesArray addObject:object[@"Picture"]];
+        }
+        counter = 0;
+        [self loadPictures];
+    }
+  ];
+}
+
+-(void)loadPictures{
+    if (counter < pffilesArray.count) {
+        PFFile *picture = [pffilesArray objectAtIndex:counter];
         [picture getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (!error) {
-                self.hatImage = [[UIImage alloc]initWithData:data];
-                [self.itemPictureArray addObject:self.hatImage];
+                [self.itemPictureArray addObject:[[UIImage alloc]initWithData:data]];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
-                });
-            }];
-        });
-    }];
+                counter++;
+                [self loadPictures];
+            });
+        }];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.itemPriceArray.count;
+    return self.itemPictureArray.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
@@ -128,40 +114,23 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    if([self.itemInCartArray[indexPath.row] boolValue] == false){
-        TheCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        if (cell == nil) {
-            [tableView registerNib:[UINib nibWithNibName:@"XIBTableViewCell" bundle:nil]forCellReuseIdentifier:CellIdentifier];
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        }
-        
-        cell.itemCompany.text=@"";
-        cell.itemPrice.text=@"";
-        cell.itemName.text=@"";
-        cell.itemImageView.image=nil;
-        
-        return cell;
-    }else{
-        TheCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        if (cell == nil) {
-            [tableView registerNib:[UINib nibWithNibName:@"XIBTableViewCell" bundle:nil]forCellReuseIdentifier:CellIdentifier];
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        }
-        
-        [cell.itemCompany setText:self.itemCompanyArray[indexPath.row]];
-        [cell.itemName setText:self.itemNameArray[indexPath.row]];
-        int price = [self.itemPriceArray[indexPath.row] intValue];
-        NSString *aPrice = [NSString stringWithFormat:@"$%i%@", price, @".00"];
-        [cell.itemPrice setText:aPrice];
-        [cell.itemImageView setImage:self.itemPictureArray[indexPath.row]];
-        
-        // Configure the cell.
-        //cell.set
-        //    cell.setItemPrice = [recipes objectAtIndex:indexPath.row];
-        return cell;
+    TheCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"XIBTableViewCell" bundle:nil]forCellReuseIdentifier:CellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     }
+    [cell.itemCompany setText:self.itemCompanyArray[indexPath.row]];
+    [cell.itemName setText:self.itemNameArray[indexPath.row]];
+    int price = [self.itemPriceArray[indexPath.row] intValue];
+    NSString *aPrice = [NSString stringWithFormat:@"$%i%@", price, @".99"];
+    [cell.itemPrice setText:aPrice];
+    [cell.itemImageView setImage:self.itemPictureArray[indexPath.row]];
+    
+    // Configure the cell.
+    //cell.set
+    //    cell.setItemPrice = [recipes objectAtIndex:indexPath.row];
+    return cell;
 }
 
 @end
