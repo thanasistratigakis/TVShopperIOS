@@ -3,10 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
             <string>Roboto-Regular</string>
         </mutableArray>
     </customFonts>
@@ -143,8 +145,44 @@
                     <view key="view" contentMode="scaleToFill" id="ECi-cC-tna">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT VERIFIED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shn-jh-c66">
+                                <rect key="frame" x="186.5" y="300" width="227" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Success (1)" translatesAutoresizingMaskIntoConstraints="NO" id="lnH-Zn-fG0">
+                                <rect key="frame" x="250" y="150" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="P2k-pj-kay"/>
+                                    <constraint firstAttribute="width" constant="100" id="zcI-EW-IPi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJB-T9-iR0">
+                                <rect key="frame" x="279" y="520" width="42" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedDone:" destination="ids-PN-9c7" eventType="touchUpInside" id="oFx-Kh-omw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lnH-Zn-fG0" firstAttribute="centerX" secondItem="ECi-cC-tna" secondAttribute="centerX" id="31P-Gt-Z7B"/>
+                            <constraint firstItem="pJB-T9-iR0" firstAttribute="centerX" secondItem="ECi-cC-tna" secondAttribute="centerX" id="912-V6-I0e"/>
+                            <constraint firstItem="ThY-an-mUq" firstAttribute="top" secondItem="pJB-T9-iR0" secondAttribute="bottom" constant="50" id="abe-ea-Evr"/>
+                            <constraint firstItem="shn-jh-c66" firstAttribute="centerX" secondItem="ECi-cC-tna" secondAttribute="centerX" id="hbW-Wd-R5Z"/>
+                            <constraint firstItem="shn-jh-c66" firstAttribute="top" secondItem="lnH-Zn-fG0" secondAttribute="centerY" constant="100" id="pQh-qO-8FS"/>
+                            <constraint firstItem="lnH-Zn-fG0" firstAttribute="centerY" secondItem="ECi-cC-tna" secondAttribute="centerY" constant="-100" id="wxd-Y4-Q6I"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="SBV-VK-Jt1" kind="presentation" identifier="ShowSuccess" id="eeq-q7-WX0"/>
@@ -196,7 +234,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59e-zc-qCN">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96256512403488159" green="0.38221564888954163" blue="0.14199256896972656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.28627450980392155" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="25"/>
                                 <state key="normal" title="CHECK OUT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,4 +286,7 @@
             <point key="canvasLocation" x="-672" y="-175"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Success (1)" width="333" height="333"/>
+    </resources>
 </document>

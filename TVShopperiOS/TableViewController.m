@@ -26,13 +26,6 @@
 }
 
 - (IBAction)refresh:(id)sender {
-    //CHECK IF INCART IS FALSE OR TRUE
-    //ADD THE COMPANY IN THE CELLS
-    [self viewDidLoad];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.;
     self.itemPriceArray = [[NSMutableArray alloc] init];
     self.itemDescArray = [[NSMutableArray alloc] init];
@@ -45,19 +38,30 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Items"];
     [query whereKey:@"inCart" notEqualTo:[NSNumber numberWithBool:false]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        for(int i = 0; i < objects.count; i++){
-            PFObject *object = [objects objectAtIndex:i];
-            [self.itemCompanyArray addObject:object[@"Company"]];
-            [self.itemDescArray addObject:object[@"Description"]];
-            NSNumber *price = [object objectForKey:@"Price"];
-            [self.itemPriceArray addObject:price];
-            [self.itemNameArray addObject:object[@"Name"]];
-            [pffilesArray addObject:object[@"Picture"]];
+        if (objects.count == 0) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }else{
+            for(int i = 0; i < objects.count; i++){
+                PFObject *object = [objects objectAtIndex:i];
+                [self.itemCompanyArray addObject:object[@"Company"]];
+                [self.itemDescArray addObject:object[@"Description"]];
+                NSNumber *price = [object objectForKey:@"Price"];
+                [self.itemPriceArray addObject:price];
+                [self.itemNameArray addObject:object[@"Name"]];
+                [pffilesArray addObject:object[@"Picture"]];
+            }
+            counter = 0;
+            [self loadPictures];
         }
-        counter = 0;
-        [self loadPictures];
     }
-  ];
+     ];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self refresh:self];
 }
 
 -(void)loadPictures{
@@ -72,6 +76,21 @@
                 counter++;
                 [self loadPictures];
             });
+        }];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Items"];
+        [query whereKey:@"Name" equalTo:self.itemNameArray[indexPath.row]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+            for (int i = 0; i < objects.count; i++) {
+                [objects[i] setObject:[NSNumber numberWithBool:false] forKey:@"inCart"];
+                [objects[i] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    [self refresh:self];
+                }];
+            }
         }];
     }
 }
@@ -132,7 +151,10 @@
         sum+=[self.itemPriceArray[i] doubleValue];
     }
     self.totalPrice = sum;
-    NSLog(@"%f",self.totalPrice);
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setDouble:self.totalPrice forKey:@"totalPrice"];
+    [defaults synchronize];
     // Configure the cell.
     //cell.set
     //    cell.setItemPrice = [recipes objectAtIndex:indexPath.row];

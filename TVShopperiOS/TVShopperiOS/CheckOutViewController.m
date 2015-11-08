@@ -21,7 +21,7 @@
     
 }
 - (IBAction)performSegue:(id)sender {
-    TableViewController *tableViewController = self.navigationController.visibleViewController;
+    
     [self performSegueWithIdentifier: @"checkOut" sender: self];
 }
 /*

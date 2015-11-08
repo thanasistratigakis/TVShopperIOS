@@ -26,29 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVShopperiOS/CheckOutViewController.m"
-            timestampString = "468685311.807499"
+            timestampString = "468686579.384093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "@implementation CheckOutButtonViewController"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVShopperiOS/CheckOutViewController.m"
-            timestampString = "468685311.807499"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "-performSegue:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TableViewController.m"
-            timestampString = "468666684.233847"
+            timestampString = "468692262.46133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TableViewController.m"
-            timestampString = "468666684.233847"
+            timestampString = "468692262.46133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,123 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TableViewController.m"
-            timestampString = "468666684.233847"
+            timestampString = "468692262.46133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TableViewController.m"
-            timestampString = "468665533.673913"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TableViewController.m"
-            timestampString = "468666622.802015"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TableViewController.m"
-            timestampString = "468666622.802015"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TableViewController viewDidLoad]"
-                  moduleName = "TVShopperiOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arthuraraujo/Desktop/TVShopperIOS/TVShopperiOS/TableViewController.m"
-                  timestampString = "468658890.922425"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "707">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__34-[TableViewController viewDidLoad]_block_invoke"
-                  moduleName = "TVShopperiOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arthuraraujo/Desktop/TVShopperIOS/TVShopperiOS/TableViewController.m"
-                  timestampString = "468658890.922657"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "70">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TableViewController.m"
-            timestampString = "468666684.233847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TableViewController.m"
-            timestampString = "468666684.233847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,12 +106,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TableViewController.m"
-            timestampString = "468666622.802015"
+            timestampString = "468692262.46133"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVShopperiOS/CheckOutViewController.m"
+            timestampString = "468686579.384093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-performSegue:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVShopperiOS/SIMProductViewController.m"
+            timestampString = "468690289.223667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-setItemsInCart:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVShopperiOS/SIMProductViewController.m"
+            timestampString = "468690289.223667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-setItemsInCart:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVShopperiOS/SIMProductViewController.m"
+            timestampString = "468691214.063278"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "-viewDidLoad"
+            landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -249,13 +185,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TableViewController.m"
-            timestampString = "468666684.233847"
+            filePath = "TVShopperiOS/SIMProductViewController.m"
+            timestampString = "468691214.063278"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -265,46 +201,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TableViewController.m"
-            timestampString = "468666684.233847"
+            filePath = "TVShopperiOS/SIMProductViewController.m"
+            timestampString = "468691214.063278"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-viewDidAppear:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__34-[TableViewController viewDidLoad]_block_invoke"
-                  moduleName = "TVShopperiOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arthuraraujo/Desktop/TVShopperIOS/TVShopperiOS/TableViewController.m"
-                  timestampString = "468666431.105616"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "924">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__34-[TableViewController viewDidLoad]_block_invoke_2"
-                  moduleName = "TVShopperiOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arthuraraujo/Desktop/TVShopperIOS/TVShopperiOS/TableViewController.m"
-                  timestampString = "468666431.106151"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVShopperiOS/SIMProductViewController.m"
+            timestampString = "468691214.063278"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-creditCardTokenProcessed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVShopperiOS/SIMProductViewController.m"
+            timestampString = "468691214.063278"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-creditCardTokenProcessed:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
