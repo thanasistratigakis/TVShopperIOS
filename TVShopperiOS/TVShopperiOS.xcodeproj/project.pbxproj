@@ -28,6 +28,10 @@
 		A70610DF1BEEE5AE00F06311 /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70610DE1BEEE5AE00F06311 /* MoreInfoViewController.m */; };
 		A752CEC31BEE9C9E00007EF8 /* XIBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A752CEC21BEE9C9E00007EF8 /* XIBTableViewCell.xib */; };
 		A752CECD1BEEAB2500007EF8 /* TheCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A752CECC1BEEAB2500007EF8 /* TheCustomTableViewCell.m */; };
+		A7B390221BEF01CB00B34134 /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B390211BEF01CB00B34134 /* SIMProductViewController.m */; };
+		A7B390241BEF079A00B34134 /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B390231BEF079A00B34134 /* Simplify.framework */; };
+		A7B390261BEF07C200B34134 /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7B390251BEF07C200B34134 /* Simplify.bundle */; };
+		A7B390341BEF090D00B34134 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B390291BEF090D00B34134 /* libOCMock.a */; };
 		A7F19C0F1BEE836300DDA00D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F19C0E1BEE836300DDA00D /* main.m */; };
 		A7F19C121BEE836300DDA00D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F19C111BEE836300DDA00D /* AppDelegate.m */; };
 		A7F19C151BEE836300DDA00D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F19C141BEE836300DDA00D /* ViewController.m */; };
@@ -81,6 +85,20 @@
 		A752CEC41BEE9E9100007EF8 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		A752CECB1BEEAB2500007EF8 /* TheCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TheCustomTableViewCell.h; path = ../TheCustomTableViewCell.h; sourceTree = "<group>"; };
 		A752CECC1BEEAB2500007EF8 /* TheCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TheCustomTableViewCell.m; path = ../TheCustomTableViewCell.m; sourceTree = "<group>"; };
+		A7B390201BEF01CB00B34134 /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
+		A7B390211BEF01CB00B34134 /* SIMProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMProductViewController.m; sourceTree = "<group>"; };
+		A7B390231BEF079A00B34134 /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
+		A7B390251BEF07C200B34134 /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
+		A7B390291BEF090D00B34134 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		A7B3902B1BEF090D00B34134 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		A7B3902C1BEF090D00B34134 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		A7B3902D1BEF090D00B34134 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		A7B3902E1BEF090D00B34134 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		A7B3902F1BEF090D00B34134 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		A7B390301BEF090D00B34134 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		A7B390311BEF090D00B34134 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		A7B390321BEF090D00B34134 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		A7B390331BEF090D00B34134 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 		A7F19C0A1BEE836300DDA00D /* TVShopperiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShopperiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F19C0E1BEE836300DDA00D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7F19C101BEE836300DDA00D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B390241BEF079A00B34134 /* Simplify.framework in Frameworks */,
 				A70610DC1BEEB64600F06311 /* libsqlite3.tbd in Frameworks */,
 				A70610DA1BEEB63100F06311 /* libz.tbd in Frameworks */,
 				A70610D81BEEB5CE00F06311 /* SystemConfiguration.framework in Frameworks */,
@@ -114,6 +133,7 @@
 				A70610D21BEEB5B100F06311 /* QuartzCore.framework in Frameworks */,
 				A70610D01BEEB5AB00F06311 /* MobileCoreServices.framework in Frameworks */,
 				A70610CE1BEEB58D00F06311 /* CoreLocation.framework in Frameworks */,
+				A7B390341BEF090D00B34134 /* libOCMock.a in Frameworks */,
 				A70610CC1BEEB58500F06311 /* CoreGraphics.framework in Frameworks */,
 				A70610CA1BEEB57E00F06311 /* CFNetwork.framework in Frameworks */,
 				A70610C81BEEB57500F06311 /* AudioToolbox.framework in Frameworks */,
@@ -144,6 +164,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7B390271BEF090D00B34134 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A7B390281BEF090D00B34134 /* ocmock */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		A7B390281BEF090D00B34134 /* ocmock */ = {
+			isa = PBXGroup;
+			children = (
+				A7B390291BEF090D00B34134 /* libOCMock.a */,
+				A7B3902A1BEF090D00B34134 /* OCMock */,
+			);
+			path = ocmock;
+			sourceTree = "<group>";
+		};
+		A7B3902A1BEF090D00B34134 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				A7B3902B1BEF090D00B34134 /* NSNotificationCenter+OCMAdditions.h */,
+				A7B3902C1BEF090D00B34134 /* OCMArg.h */,
+				A7B3902D1BEF090D00B34134 /* OCMConstraint.h */,
+				A7B3902E1BEF090D00B34134 /* OCMLocation.h */,
+				A7B3902F1BEF090D00B34134 /* OCMMacroState.h */,
+				A7B390301BEF090D00B34134 /* OCMock.h */,
+				A7B390311BEF090D00B34134 /* OCMockObject.h */,
+				A7B390321BEF090D00B34134 /* OCMRecorder.h */,
+				A7B390331BEF090D00B34134 /* OCMStubRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		A7F19C011BEE836300DDA00D = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +228,8 @@
 				A70610DE1BEEE5AE00F06311 /* MoreInfoViewController.m */,
 				A7F19C421BEE8D3A00DDA00D /* TableViewController.h */,
 				A7F19C431BEE8D3A00DDA00D /* TableViewController.m */,
+				A7B390201BEF01CB00B34134 /* SIMProductViewController.h */,
+				A7B390211BEF01CB00B34134 /* SIMProductViewController.m */,
 				A752CECB1BEEAB2500007EF8 /* TheCustomTableViewCell.h */,
 				A752CECC1BEEAB2500007EF8 /* TheCustomTableViewCell.m */,
 				A752CEC21BEE9C9E00007EF8 /* XIBTableViewCell.xib */,
@@ -191,6 +246,9 @@
 		A7F19C0D1BEE836300DDA00D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7B390271BEF090D00B34134 /* vendor */,
+				A7B390251BEF07C200B34134 /* Simplify.bundle */,
+				A7B390231BEF079A00B34134 /* Simplify.framework */,
 				A70610DB1BEEB64600F06311 /* libsqlite3.tbd */,
 				A70610D91BEEB63100F06311 /* libz.tbd */,
 				A70610D71BEEB5CE00F06311 /* SystemConfiguration.framework */,
@@ -339,6 +397,7 @@
 				A752CEC31BEE9C9E00007EF8 /* XIBTableViewCell.xib in Resources */,
 				A7F19C1A1BEE836300DDA00D /* Assets.xcassets in Resources */,
 				A7F19C181BEE836300DDA00D /* Main.storyboard in Resources */,
+				A7B390261BEF07C200B34134 /* Simplify.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +427,7 @@
 				A7F19C441BEE8D3A00DDA00D /* TableViewController.m in Sources */,
 				A752CECD1BEEAB2500007EF8 /* TheCustomTableViewCell.m in Sources */,
 				A7F19C121BEE836300DDA00D /* AppDelegate.m in Sources */,
+				A7B390221BEF01CB00B34134 /* SIMProductViewController.m in Sources */,
 				A7F19C0F1BEE836300DDA00D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +503,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -487,6 +548,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -509,12 +571,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TVShopperiOS",
+					"$(PROJECT_DIR)/TVShopperiOS/Simplify",
 				);
 				INFOPLIST_FILE = TVShopperiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TVShopperiOS/Simplify/vendor/ocmock",
+					"$(PROJECT_DIR)/TVShopperiOS/vendor/ocmock",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurAraujo.TVShopperiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -524,12 +595,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TVShopperiOS",
+					"$(PROJECT_DIR)/TVShopperiOS/Simplify",
 				);
 				INFOPLIST_FILE = TVShopperiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TVShopperiOS/Simplify/vendor/ocmock",
+					"$(PROJECT_DIR)/TVShopperiOS/vendor/ocmock",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurAraujo.TVShopperiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -539,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TVShopperiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurAraujo.TVShopperiOSTests;
@@ -551,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TVShopperiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurAraujo.TVShopperiOSTests;
@@ -562,6 +644,7 @@
 		A7F19C3E1BEE836400DDA00D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TVShopperiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurAraujo.TVShopperiOSUITests;
@@ -574,6 +657,7 @@
 		A7F19C3F1BEE836400DDA00D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TVShopperiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurAraujo.TVShopperiOSUITests;

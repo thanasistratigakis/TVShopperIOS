@@ -21,8 +21,8 @@
     [Parse setApplicationId:@"PXvPzNEGXByAl7E6VdtvuFG2KLPMDEg4WOrZ47Tp"
                   clientKey:@"jwsGDYj1zKbjxYiapwOFm5OQVIQlSUGsMidaFti6"];
     
-   // UIImage *navBackgroundImage = [UIImage imageNamed:@"Navigation_Bar"];
-    //[[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+   UIImage *navBackgroundImage = [UIImage imageNamed:@"Navigation_Bar"];
+    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     
     return YES;
 }

@@ -10,6 +10,7 @@
 #import "TheCustomTableViewCell.h"
 #import "MoreInfoViewController.h"
 #import <Parse/Parse.h>
+#import <Simplify/Simplify.h>
 
 @interface TableViewController ()
 
