@@ -51,7 +51,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nxK-gj-kuo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cw8-db-fbP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
+                        <rect key="frame" x="0.0" y="44" width="600" height="496"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VCS-Z1-wnB">
@@ -270,7 +270,7 @@
         <scene sceneID="VBc-l2-HhX">
             <objects>
                 <navigationController title="TV Shopper" id="WJF-Op-ebv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="aXt-Wx-hh5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="aXt-Wx-hh5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>

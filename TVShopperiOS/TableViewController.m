@@ -33,7 +33,7 @@
     self.itemNameArray = [[NSMutableArray alloc] init];
     self.itemPictureArray = [[NSMutableArray alloc] init];
     self.itemInCartArray = [[NSMutableArray alloc] init];
-    pffilesArray = [[NSMutableArray alloc]init];
+    pffilesArray = [[NSMutableArray alloc] init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Items"];
     [query whereKey:@"inCart" notEqualTo:[NSNumber numberWithBool:false]];
@@ -92,6 +92,26 @@
                 }];
             }
         }];
+        /*
+         FOR TANASI --- SWIFT CODE --- FOR TANASI
+        var query = PFQuery(className: "Items")
+        query.whereKey("Name", equalTo: "NAME OF SELECTED PRODUCT")
+        query.findObjectsInBackgroundWithBlock ({(objects:[AnyObject]!, error: NSError!) in
+            if(error == nil){
+                for (int i = 0; i < objects.count; i++) {
+                    [objects[i] setObject:[NSNumber numberWithBool:false] forKey:@"inCart"];
+                    [objects[i] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        //DO STUFF AFTER INCART IS SAVED
+                    }]
+            }
+            else{
+                println("Error in retrieving \(error)")
+            }
+            
+        })
+         FOR TANASI --- SWIFT CODE --- FOR TANASI
+         */
+        
     }
 }
 
