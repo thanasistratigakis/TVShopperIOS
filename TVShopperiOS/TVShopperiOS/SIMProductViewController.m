@@ -21,7 +21,8 @@
     
     //2. Create a SIMChargeViewController with your public api key
     SIMChargeCardViewController *chargeVC = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_Y2YyYjEzNzgtZDgwNi00NjJlLTk1NmItZDA3MTc2NzJhNTk5"];
-    
+    chargeVC.defaultCardNumber = @"5555555555554444";
+    chargeVC.defaultExpiration = @"0220";
     //3. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
     chargeVC.delegate = self;
     
@@ -36,6 +37,12 @@
     
     //Process the provided token
     NSLog(@"Token:%@", token.token);
+    NSURL *url= [NSURL URLWithString:@"tv-shopper.herokuapp.com"];
+    //Process Request on your own server
+    NSURLResponse *response;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *string = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    NSLog(@"responseData: %@", string);
     
 }
 
