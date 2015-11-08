@@ -8,42 +8,102 @@
 
 #import <Simplify/SIMChargeCardViewController.h>
 #import <Simplify/SIMResponseViewController.h>
+#import "TableViewController.h"
 
 //1. Sign up to be a SIMChargeViewControllerDelegate so that you get the callback that gives you a token
 @interface SIMProductViewController: UIViewController <SIMChargeCardViewControllerDelegate>
+
+@property (strong, nonatomic) SIMChargeCardViewController *chargeVC;
+
+@property (nonatomic) BOOL succeeded;
+
 
 @end
 
 @implementation SIMProductViewController
 
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    
     //2. Create a SIMChargeViewController with your public api key
-    SIMChargeCardViewController *chargeVC = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_Y2YyYjEzNzgtZDgwNi00NjJlLTk1NmItZDA3MTc2NzJhNTk5"];
-    chargeVC.defaultCardNumber = @"5555555555554444";
-    chargeVC.defaultExpiration = @"0220";
+    
+    if (!self.succeeded) {
+        
+    
+    self.chargeVC = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_Y2YyYjEzNzgtZDgwNi00NjJlLTk1NmItZDA3MTc2NzJhNTk5"];
+    self.chargeVC.defaultCardNumber = @"5555555555554444";
+    self.chargeVC.defaultExpiration = @"0220";
+    self.chargeVC.amount = [[NSDecimalNumber alloc] initWithDouble:100.00];//INPUT THE REAL VALUE LATER
+    
     //3. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
-    chargeVC.delegate = self;
+    self.chargeVC.delegate = self;
     
     //4. Add SIMChargeViewController to your view hierarchy
-    [self presentViewController:chargeVC animated:YES completion:nil];
-    
+    [self presentViewController:self.chargeVC animated:YES completion:nil];
+    }else{
+        
+        
+        self.view.backgroundColor = [UIColor greenColor];
+        
+    }
 }
 
 #pragma mark SIMChargeCardViewControllerDelegate callback
 //5. This method will be called on your class whenever the user presses the Charge Card button and tokenization succeeds
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     
-    //Process the provided token
-    NSLog(@"Token:%@", token.token);
-    NSURL *url= [NSURL URLWithString:@"tv-shopper.herokuapp.com"];
-    //Process Request on your own server
-    NSURLResponse *response;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSString *string = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"responseData: %@", string);
     
+    //NSLog(@"Token:%@", token.token);
+    
+    NSString *paramsString = [NSString stringWithFormat:@"amount=1000&simplifyToken=%@",token.token];
+    
+    NSURL *url= [NSURL URLWithString:@"https://tv-shopper.herokuapp.com/charge.php"];
+    //NSLog(@"url = %@", url);
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = [paramsString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+       
+        
+        NSLog(@"response = %@", response);
+        if (error) {
+            NSLog(@"error:%@", error);
+        }else{
+            NSDictionary *responseObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSLog(@"response = %@", responseObj);
+            
+            if ([responseObj[@"status"] isEqualToString:@"APPROVED"]) {
+                
+                
+                //
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                   
+                    //modify the ui
+                    
+                    
+                    self.succeeded = YES;
+                    
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                    //[self performSegueWithIdentifier:@"ShowSuccess" sender:self];
+
+                    
+                });
+                
+            }else{
+                NSLog(@"Declined!");
+                //
+            }
+            
+        }
+        
+    }];
+    
+    [task resume];
 }
 
 #pragma mark - SIMChargeViewControllerDelegate Protocol

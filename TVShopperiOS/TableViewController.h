@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSMutableArray *itemNameArray;
 @property (nonatomic, strong) NSMutableArray *itemPictureArray;
 @property (nonatomic, strong) NSMutableArray *itemInCartArray;
+@property (nonatomic) double totalPrice;
 @property (nonatomic, strong) UIImage *currentObjectImage;
 @property (nonatomic, strong) UIImage *hatImage;
 /*

@@ -12,4 +12,6 @@
 
 @interface SIMProductViewController: UIViewController <SIMChargeCardViewControllerDelegate>
 
+@property (nonatomic) double totalAmount;
+
 @end

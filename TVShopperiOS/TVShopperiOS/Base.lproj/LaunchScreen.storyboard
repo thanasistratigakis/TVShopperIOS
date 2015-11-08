@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Splash_Screen_(6S)" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-Gp-qea">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="flJ-Gp-qea" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="6VN-m4-XBF"/>
+                            <constraint firstItem="flJ-Gp-qea" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="MGU-sY-aJT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="flJ-Gp-qea" secondAttribute="trailing" id="S7Z-fw-0qs"/>
+                            <constraint firstItem="flJ-Gp-qea" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="SFI-dH-Lup"/>
+                            <constraint firstItem="flJ-Gp-qea" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="blB-VY-Ra1"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="flJ-Gp-qea" secondAttribute="bottom" id="gak-gF-Wzj"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="flJ-Gp-qea" secondAttribute="bottom" id="hhr-zb-cr3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="flJ-Gp-qea" secondAttribute="trailing" constant="-20" id="xnQ-dO-U1B"/>
+                            <constraint firstItem="flJ-Gp-qea" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="yKk-gc-bOC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MGU-sY-aJT"/>
+                                <exclude reference="S7Z-fw-0qs"/>
+                                <exclude reference="SFI-dH-Lup"/>
+                                <exclude reference="hhr-zb-cr3"/>
+                                <exclude reference="yKk-gc-bOC"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,4 +52,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash_Screen_(6S)" width="375" height="667"/>
+    </resources>
 </document>

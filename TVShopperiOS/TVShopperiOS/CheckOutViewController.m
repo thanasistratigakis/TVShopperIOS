@@ -8,6 +8,7 @@
 
 #import "CheckOutButtonViewController.h"
 #import "SIMProductViewController.h"
+#import "TableViewController.h"
 
 @interface CheckOutButtonViewController ()
 
@@ -20,9 +21,20 @@
     
 }
 - (IBAction)performSegue:(id)sender {
+    TableViewController *tableViewController = self.navigationController.visibleViewController;
     [self performSegueWithIdentifier: @"checkOut" sender: self];
 }
 /*
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"checkOut"])
+    {
+        TableViewController *tableViewController = self.navigationController.viewControllers[1];
+        SIMProductViewController *simProductViewController = [segue destinationViewController];
+        simProductViewController.totalAmount = tableViewController.totalPrice;
+    }
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"checkOut"])

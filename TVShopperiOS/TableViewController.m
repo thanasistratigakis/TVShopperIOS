@@ -127,6 +127,12 @@
     [cell.itemPrice setText:aPrice];
     [cell.itemImageView setImage:self.itemPictureArray[indexPath.row]];
     
+    double sum;
+    for (int i = 0; i < self.itemPriceArray.count; i++) {
+        sum+=[self.itemPriceArray[i] doubleValue];
+    }
+    self.totalPrice = sum;
+    NSLog(@"%f",self.totalPrice);
     // Configure the cell.
     //cell.set
     //    cell.setItemPrice = [recipes objectAtIndex:indexPath.row];

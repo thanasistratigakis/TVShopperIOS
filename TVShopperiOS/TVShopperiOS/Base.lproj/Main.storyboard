@@ -146,10 +146,32 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="SBV-VK-Jt1" kind="presentation" identifier="ShowSuccess" id="eeq-q7-WX0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caj-Nf-58z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1408" y="549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Euz-mU-TZf">
+            <objects>
+                <viewController id="SBV-VK-Jt1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dx5-zP-5UB"/>
+                        <viewControllerLayoutGuide type="bottom" id="1SE-Qg-1Fu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tke-DZ-2Y0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.180392161" green="0.74901962280000001" blue="0.40784317260000003" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpa-CY-Cco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-718" y="549"/>
         </scene>
         <!--Check Out Button View Controller-->
         <scene sceneID="dLx-kd-CCg">
@@ -204,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCT-1u-cJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1408" y="-162"/>
+            <point key="canvasLocation" x="-1408" y="-175"/>
         </scene>
         <!--TV Shopper-->
         <scene sceneID="VBc-l2-HhX">
